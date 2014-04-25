@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :user do
+  factory :boot do
     name { Faker::Company.name }
     github_profile_link { Faker::Internet.url }
     twitter_profile_link { Faker::Internet.url }
