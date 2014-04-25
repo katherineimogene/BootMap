@@ -8,4 +8,11 @@ describe BootmapController do
       expect(response).to be_success
     end
   end
+
+  context '#boots' do
+    it 'is successful' do
+      get :boots
+      expect(response).to be_success
+    end
+  end
 end
