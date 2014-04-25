@@ -10,9 +10,10 @@ describe BootmapController do
   end
 
   context '#boots' do
-    it 'is successful' do
+    it 'returns json' do
       get :boots
-      expect(response).to be_success
+      boot_json = { boots: [] }.to_json
+      expect(response.body).to eq boot_json
     end
   end
 end
