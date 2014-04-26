@@ -13,6 +13,9 @@ gem 'leaflet-rails'
 #use dbc api
 gem 'dbc-ruby'
 
+#geocoder to generate lat,long
+gem "geocoder"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
