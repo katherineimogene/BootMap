@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+all_boots = DBC::User.all
+
+all_boots.each do |boot|
+  user = User.create(
+    id: boot.id,
+    name: boot.name,
+    github_profile_link: boot.profile[:github],
+    twitter_profile_link: boot.profile[:twitter],
+    facebook_profile_link: boot.profile[:facebook],
+    linked_in_profile_link: boot.profile[:linked_in],
+    blog_link: boot.profile[:blog],
+    current_location: boot.profile[:current_location]
+    )
+end
+
