@@ -10,6 +10,9 @@ gem 'pg'
 #leaflet for mapping
 gem 'leaflet-rails'
 
+#use dbc api
+gem 'dbc-ruby'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
