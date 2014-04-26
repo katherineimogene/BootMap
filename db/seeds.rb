@@ -1,7 +1,7 @@
 all_boots = DBC::User.all
 
 all_boots.each do |boot|
-  user = User.create(
+  Boot.create(
     id: boot.id,
     name: boot.name,
     github_profile_link: boot.profile[:github],
