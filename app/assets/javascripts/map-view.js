@@ -30,11 +30,13 @@ BootMap.View.prototype = {
   renderStats: function(cityCount){
     var newDiv = document.createElement('div')
     newDiv.classList.add('boot-stats')
-    newDiv.innerText = cityCount
-    console.log("city Count " + newDiv.innerText)
-    // $("#logo-in-map").empty();
-    // view.showNumOfCities(cityCount);
-    console.log("here is your div: "+ newDiv + "append it somewhere nice on the page!")
+    newDiv.innerText = this.setStatDivText(cityCount)
+    document.getElementById('map').appendChild(newDiv)
+  },
+
+  setStatDivText: function(cityCount){
+    var divText = "Find Dev Bootcamp humans in " + cityCount + " cities around the world"
+    return divText
   },
 
   //bindPopup and openPopup are leaflet fns

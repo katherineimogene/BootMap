@@ -1,3 +1,6 @@
+body {
+  margin: 0px;
+}
 #map {
  position:absolute;
  top:0;
@@ -31,7 +34,8 @@ li.social-link {
   color: #3F3C3C;
 }
 
-span#logo-in-map {
+.boot-stats {
+  z-index: 1000;
   left: 167px;
   top: 58px;
   color: #2c3e50;
@@ -40,10 +44,8 @@ span#logo-in-map {
   padding: 0;
   float: left;
   position: absolute;
-  width: 400px;
-  font-size: 120%;
+  font-size: 2em;
 }
-
 .social-link .fa {
   color: #0078a8;
 }
