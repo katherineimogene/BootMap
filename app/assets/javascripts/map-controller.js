@@ -1,0 +1,3 @@
+BootMap.Controller = function(){
+
+}

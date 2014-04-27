@@ -1,0 +1,3 @@
+BootMap.View = function(){
+
+}
