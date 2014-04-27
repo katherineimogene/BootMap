@@ -36,3 +36,19 @@ describe("Controller", function(){
   })
 
 })
+
+describe("View", function(){
+  beforeEach(function(){
+    this.view = new BootMap.View(true);
+    this.mapObject = true;
+    this.osm = true;
+  })
+
+  it("it has a controller",function(){
+    expect(this.view.controller).toBeTruthy()
+  }),
+
+  it("draws a map", function(){
+    expect(this.view.drawMap()).toBeDefined()
+  })
+})
