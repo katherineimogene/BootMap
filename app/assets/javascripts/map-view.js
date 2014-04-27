@@ -57,11 +57,11 @@ BootMap.View.prototype = {
 
   formatPopup: function(boot){
     var userName = [
-    "<a class='profile-link user-link'",
+    "<div class='boot-name'",
     "id='",boot.id,
     "'>",
     boot.name,
-    "</a>"
+    "</div>"
     ]
 
     var socialMedia = [
