@@ -1,7 +1,6 @@
 BootMap.Boot = function(jsonData){
     this.id = jsonData.id
     this.name = jsonData.name
-    this.email = jsonData.email
     this.github_profile_link = jsonData.github_profile_link
     this.twitter_profile_link = jsonData.twitter_profile_link
     this.facebook_profile_link = jsonData.facebook_profile_link
