@@ -1,18 +1,14 @@
-// BootMap.Controller = function(){
+BootMap.Controller = function(){
 
-// }
+}
 
-// BootMap.Controller.prototype = {
-//   newMap: function(){
-//     var map = {}
-//     return map
-//   },
+BootMap.Controller.prototype = {
 
-//   osmInitializer: function(){
-//     var osm = {}
-//     return osm
-//   }
-// }
+  osmInitializer: function(){
+    var osm = {}
+    return osm
+  }
+}
 
 BootMap.Controller = function(){
 }

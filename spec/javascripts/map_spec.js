@@ -18,9 +18,19 @@ describe("NameSpace", function(){
 
 describe("Controller", function(){
   beforeEach(function(){
-    controller = new BootMap.Controller
     mapStub = {}
     osmStub = {}
+    BootMap.Controller.prototype = {
+      newMap: function(){
+        var map = {}
+        return map
+      },
+      initializeOSM: function(){
+        var osm = {}
+        return osm
+      }
+    }
+    controller = new BootMap.Controller
   })
 
   it("has a new map function", function(){
@@ -32,7 +42,7 @@ describe("Controller", function(){
   }),
 
   it("initializes an OpenStreetMap layer", function(){
-    expect(returnTypeOf(controller.osmInitializer())).toBe(returnTypeOf(osmStub))
+    expect(returnTypeOf(controller.initializeOSM())).toBe(returnTypeOf(osmStub))
   })
 
 })
@@ -42,6 +52,12 @@ describe("View", function(){
     this.view = new BootMap.View(true);
     this.mapObject = true;
     this.osm = true;
+    BootMap.View.prototype = {
+      drawMap: function(){
+        var drawnMap = {}
+        return drawnMap
+      }
+    }
   })
 
   it("it has a controller",function(){
