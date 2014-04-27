@@ -47,32 +47,33 @@ BootMap.View.prototype = {
   },
 
   formatPopup: function(boot){
-    var userName = [
-    "<div class='boot-name'",
-    "id='",boot.id,
-    "'>",
-    boot.name,
-    "</div>"
-    ]
+    var thisBoot = {
+      name: boot.name,
+      socialLinks: [
+        { url: boot.github_profile_link,     icon: 'fa fa-github fa-lg'},
+        { url: boot.twitter_profile_link,    icon: 'fa fa-twitter fa-lg'},
+        { url: boot.facebook_profile_link,   icon: 'fa fa-facebook fa-lg'},
+        { url: boot.linked_in_profile_link,  icon: 'fa fa-linkedin fa-lg'},
+        { url: boot.blog_link,               icon: 'fa fa-tumblr fa-lg'}
+        ]
+    }
 
-    var socialMedia = [
-      "<ul class='social-media'>",
-      "<li class='social-link'><a href=",boot.github_profile_link," target='_blank'><i i class='fa fa-github fa-lg'></i></a></li>",
-      "<li class='social-link'><a href=",boot.twitter_profile_link," target='_blank'><i i class='fa fa-twitter fa-lg'></i></a></li>",
-      "<li class='social-link'><a href=",boot.facebook_profile_link," target='_blank'><i i class='fa fa-facebook fa-lg'></i></a></li>",
-      "<li class='social-link'><a href=",boot.linked_in_profile_link," target='_blank'><i i class='fa fa-linkedin fa-lg'></i></a></li>",
-      "<li class='social-link'><a href=",boot.blog_link," target='_blank'><i i class='fa fa-tumblr fa-lg'></i></a></li>",
-      "</ul>"
-      ]
+    var bootNameTemplate = "<div class='boot-name'>{{name}}</div>";
+    var bootNameHtml = Mustache.to_html(bootNameTemplate, thisBoot);
 
-    var content = [
+    var socialMedia = "<ul class='social-media'>{{#socialLinks}}<li class='social-link'><a href='{{url}}' target='_blank'><i i class='{{icon}}'></i></a></li>{{/socialLinks}}</ul>";
+    var bootSocialMediaHtml = Mustache.to_html(socialMedia, thisBoot);
+
+    var bootPopupContent = [
                     "<div class='user-popup'>",
-                    userName.join(""),
-                    socialMedia.join(""),
+                    bootNameHtml,
+                    bootSocialMediaHtml,
                     boot.current_location,
                     "</div>"
                   ]
-    return content.join("")
+    return bootPopupContent.join("")
   }
 
 }
+
+
