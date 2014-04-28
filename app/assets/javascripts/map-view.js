@@ -35,7 +35,7 @@ BootMap.View.prototype = {
   },
 
   setStatDivText: function(cityCount){
-    var divText = "Find Dev Bootcamp humans in " + cityCount + " cities around the world"
+    var divText = "BootMap: find Dev Bootcamp humans in " + cityCount + " cities around the world"
     return divText
   },
 
