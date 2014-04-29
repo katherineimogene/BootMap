@@ -1,5 +1,7 @@
 # BootMap
 
+http://bootmap.herokuapp.com/
+
 BootMap is a visual representation of Dev Bootcamp humans around the world.  I completed this work originally as a part of my final project at Dev Bootcamp, [DBC Connect](http://dbcconnect.herokuapp.com/). Access to DBC Connect is restricted to DBC humans; if this pertains to you please feel free to visit and use the application. 
 
 #### Open Source, Open Data
